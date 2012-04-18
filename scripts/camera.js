@@ -1080,7 +1080,9 @@
 				
 				
 		var slide = $('.cameraSlide:eq('+slideI+')',target);
-		$('.cameraContent',fakeHover).fadeOut(600);
+		//$('.cameraContent',fakeHover).fadeOut(600);
+		$('.cameraContent',fakeHover).animate({'top': $('.cameraContent .camera_caption',fakeHover).height()},200,easing);
+
 		$('.camera_caption',fakeHover).show();
 		
 		$('.camerarelative',slide).append($('> div ',elem).eq(slideI).find('> div.camera_effected'));
